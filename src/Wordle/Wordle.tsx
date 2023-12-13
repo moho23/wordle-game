@@ -1,5 +1,5 @@
 import "./wordle.scss"
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import GuessRow from "../components/guessRow/GuessRow";
 import {observer, useLocalObservable} from "mobx-react-lite";
 import GameStore from "../store/GameStore"
@@ -18,9 +18,6 @@ export default observer(function Wordle() {
             window.removeEventListener('keyup', store.handleKeyUp)
         }
     }, [])
-
-    const [word, setWord] = useState("RAISE")
-    const [guess, setGuess] = useState("")
 
     return (
         <div className="wordle-main">
