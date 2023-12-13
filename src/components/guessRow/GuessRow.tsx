@@ -7,10 +7,11 @@ function GuessRow(props: GuessRowI) {
     return (
         <div className="guess-row-main">
             {
-                [...Array(5)].map((_, key) => (
+                [...Array(5)].map((_, i) => (
                         <div
-                            className={`item ${!props.isGuessed ? "black" : props.word[key] === props.guessPhrase[key] ? "green" : props.word.includes(props.guessPhrase[key]) ? "yellow" : "black"}`}
-                            key={key}>{props.guessPhrase[key]}
+                            className={`item ${!props.isGuessed ? "black" : props.word[i] === props.guessPhrase[i] ? "green" : props.word.includes(props.guessPhrase[i]) ? "yellow" : "black"}`}
+                            key={i}>
+                            {props.guessPhrase[i]}
                         </div>
                     )
                 )

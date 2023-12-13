@@ -8,6 +8,11 @@
         background-color: white;
         width: 45px;
         height: 45px;
+        @include main-pre-md {
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+        }
         border-radius: 6px;
         color: black;
         font-weight: bold;

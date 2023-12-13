@@ -5,13 +5,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     min-width: 320px;
     min-height: 100vh;
 
+    .mb {
+        margin-bottom: 12px;
+    }
+
+    .reset-btn {
+        border: none;
+        outline: none;
+        background-color: lightblue;
+        padding: 8px 12px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 6px;
+        font-size: 20px;
+        font-weight: bold;
+    }
 
     .game-board {
         display: flex;
+        margin: 24px 0;
         flex-direction: column;
         row-gap: 12px;
     }
