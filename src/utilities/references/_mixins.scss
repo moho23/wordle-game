@@ -1,0 +1,103 @@
+@mixin main-xs {
+    @media (max-width: 575.98px) {
+        @content
+    }
+}
+
+;
+
+@mixin main-sm {
+    @media (min-width: 575.98px) {
+        @content
+    }
+}
+
+;
+
+@mixin main-md {
+    @media (min-width: 767.98px) {
+        @content
+    }
+}
+
+;
+
+@mixin main-lg {
+    @media (min-width: 991.98px) {
+        @content
+    }
+}
+
+;
+
+@mixin main-xl {
+    @media (min-width: 1199.98px) {
+        @content
+    }
+}
+
+;
+
+@mixin main-pre-xs {
+    @media (max-width: 575.98px) {
+        @content
+    }
+}
+
+;
+
+@mixin main-pre-sm {
+    @media (max-width: 575.98px) {
+        @content
+    }
+}
+
+;
+
+@mixin main-pre-md {
+    @media (max-width: 767.98px) {
+        @content
+    }
+}
+
+;
+
+@mixin main-pre-lg {
+    @media (max-width: 991.98px) {
+        @content
+    }
+}
+
+;
+
+@mixin main-pre-xl {
+    @media (max-width: 1199.98px) {
+        @content
+    }
+}
+
+;
+
+@mixin main-size($property, $web-value, $mobile-value) {
+    @include main-xs {
+        #{$property}: $mobile-value;
+    }
+
+    @include main-sm {
+        #{$property}: (2*$mobile-value + $web-value)/3;
+    }
+
+    @include main-md {
+        #{$property}: ($mobile-value + $web-value)/2;
+    }
+
+    @include main-lg {
+        #{$property}: ($mobile-value + 2*$web-value)/3;
+    }
+
+    @include main-xl {
+        #{$property}: $web-value;
+    }
+}
+
+;
