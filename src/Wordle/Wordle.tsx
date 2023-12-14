@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import GuessRow from "../components/guessRow/GuessRow";
 import {observer, useLocalObservable} from "mobx-react-lite";
 import GameStore from "../store/GameStore"
+import Keyboard from "../components/keyboard/Keyboard";
 
 export default observer(function Wordle() {
     const store = useLocalObservable(() => GameStore)
@@ -36,6 +37,7 @@ export default observer(function Wordle() {
             <h3 className="mb">chosen word: {store.mainWord}</h3>
             {(store.isWon || store.isLost) &&
             <button className="mb reset-btn" onClick={() => store.initialize()}>reset game</button>}
+            <Keyboard store={store}/>
         </div>
     )
 })

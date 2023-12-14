@@ -1,0 +1,45 @@
+@import "src/utilities/references/index";
+
+.keyboard-main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 4px;
+
+        .alph-item {
+            width: 30px;
+            height: 30px;
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            cursor: pointer;
+            text-transform: uppercase;
+
+            &.green {
+                background-color: forestgreen;
+            }
+
+            &.yellow {
+                background-color: yellow;
+                color: black;
+            }
+
+            &.black1 {
+                background-color: #292727;
+                color: white;
+            }
+
+            &.black2 {
+                background-color: #474444;
+                color: white;
+            }
+        }
+    }
+}

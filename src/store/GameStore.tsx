@@ -47,5 +47,25 @@ export default {
         //     toast.error("Sorry, The word is not defined in my dictionary")
         //     this.guessesList[this.attemptCounter] = ""
         // }
-    }
+    },
+
+    get hasMatch() {
+        return (
+            this.mainWord.split('')
+                // if any guesses include this letter in this 'i'
+                .filter((item: string, i: number) => {
+                    return this.guessesList.slice(0, this.attemptCounter).map((word) => word[i]).includes(item)
+                })
+        )
+    },
+
+    get allGuesses() {
+        return this.guessesList.slice(0, this.attemptCounter).join('').split('')
+    },
+
+    get hasNoMatch() {
+        return (this.mainWord
+            .split('')
+            .filter((letter) => this.allGuesses.includes(letter)))
+    },
 }
